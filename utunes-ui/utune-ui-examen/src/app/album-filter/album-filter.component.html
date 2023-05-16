@@ -1,0 +1,8 @@
+<div class="row col-sm=4 py-5">
+    <select (change)="onChange($event.target)" class="form-control">
+        <option value="all">All</option>
+        <option *ngFor="let album of albums" value="{{album.name}}">
+            {{album.name}}
+        </option>
+    </select>    
+</div>

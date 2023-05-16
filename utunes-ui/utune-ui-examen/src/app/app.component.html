@@ -1,0 +1,20 @@
+<app-album-filter (changed)="filterByAlbum($event)"></app-album-filter>
+
+<div class="row">
+  <div (click)="onclick(song);" class="card col-sm-3 mx-4" *ngFor="let song of filteredSongs">
+    <div class="card-body">
+      <h2 class="card-tittle">
+        {{song.name}}
+      </h2>
+    </div>
+    <div class="card-text">
+      <ul>
+        <li>
+          <strong>Artist:</strong> {{song.artist}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<app-song [song]="selectedSong"></app-song>
